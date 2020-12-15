@@ -65,7 +65,6 @@ app.get("/:listName", function (req, res) {
         if (!foundList) {
           const list = new List({
             name: listName,
-            items: defaultItem,
           });
 
           list.save();
