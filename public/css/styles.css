@@ -1,0 +1,168 @@
+html {
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(65deg, #b7ffd5 50%, #fdfdfd 50%);
+  min-height: 1000px;
+  font-family: 'helvetica neue';
+}
+
+h1 {
+  color: rgb(77, 77, 77);
+  padding: 10px;
+  font-size: 26px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+  background-color: #b7ffd5;
+  text-align: center;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+form.item {
+  text-align: center;
+  margin-left: 20px;
+}
+
+.btn {
+  min-height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #b7ffd5;
+  color: rgb(77, 77, 77);
+  font-size: 25px;
+  padding-bottom: 3px;
+  border-width: 0;
+  margin-left: 15px;
+}
+
+.btn:hover{
+  animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+            transform: scale(0.5);
+  }
+  100% {
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+            transform: scale(0.5);
+  }
+  100% {
+            transform: scale(1);
+  }
+}
+
+
+.infoBtn{
+  border: 0;
+  background-color: #fdfdfd;
+}
+
+.infoBtn:hover{
+  animation: vibrate-1 0.3s linear infinite both;
+}
+
+@-webkit-keyframes vibrate-1 {
+  0% {
+            transform: translate(0);
+  }
+  20% {
+            transform: translate(-2px, 2px);
+  }
+  40% {
+            transform: translate(-2px, -2px);
+  }
+  60% {
+            transform: translate(2px, 2px);
+  }
+  80% {
+            transform: translate(2px, -2px);
+  }
+  100% {
+            transform: translate(0);
+  }
+}
+@keyframes vibrate-1 {
+  0% {
+            transform: translate(0);
+  }
+  20% {
+            transform: translate(-2px, 2px);
+  }
+  40% {
+            transform: translate(-2px, -2px);
+  }
+  60% {
+            transform: translate(2px, 2px);
+  }
+  80% {
+            transform: translate(2px, -2px);
+  }
+  100% {
+            transform: translate(0);
+  }
+}
+
+
+
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #b7ffd5;
+}
+
+::placeholder {
+  color: rgb(77, 77, 77);
+  opacity: 1;
+}
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}

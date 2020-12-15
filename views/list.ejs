@@ -1,0 +1,43 @@
+<%- include("header") -%>
+
+<button class="infoBtn" onclick="handleClick()"><img src="/info.png" alt=""></button>
+
+<div class="box" id="heading">
+  <h1> <%= listTitle %> </h1> 
+</div>
+
+<div class="box">
+  <% newListItems.forEach(function(item){ %>
+  <form action="/delete" method="post">
+    <div class="item">
+        <button class="btn" type="submit" name="checkbox" value="<%= item._id %>" >-</button>
+      <p><%=  item.name  %></p>
+    </div>
+    <input type="hidden" name="listName" value="<%=listTitle %>"></input>
+  </form>
+  <% }) %>
+
+
+
+  <form class="item" action="/" method="post">
+    <input type="text" name="newItem" placeholder="Add Chore" autocomplete="off"  required>
+    <button class="btn" type="submit" name="list" value="<%= listTitle %>">+</button>
+  </form>
+</div>
+
+<script>
+
+  function handleClick(){
+    Swal.fire({
+      icon: "info",
+      iconColor: "#b7ffd5",
+      confirmButtonColor: "#b7ffd5",
+      title: 'Create Your Own ToDoList!',
+      text: 'Write at the end of the URL : "/NameOfYourList" and hit enter to create a new list.'
+    });
+  }
+</script>
+
+
+
+<%- include("footer") -%>
