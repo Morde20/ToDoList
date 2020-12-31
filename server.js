@@ -45,17 +45,21 @@ const List = mongoose.model("list", listSchema);
 const today = date.getDate();
 
 app.get("/", function (req, res) {
+  try{
   Item.find({}, function (err, foundItems) {
     res.render("list", {
       listTitle: today,
       newListItems: foundItems,
     });
   });
+  }catch(e){
+    console.log(e)
+  }
 });
 
 app.get("/:listName", function (req, res) {
   const listName = req.params.listName;
-
+  
   List.findOne(
     {
       name: listName,
